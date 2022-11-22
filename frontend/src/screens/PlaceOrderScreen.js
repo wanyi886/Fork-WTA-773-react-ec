@@ -11,9 +11,9 @@ function PlaceOrderScreen(props) {
 
   const { cartItems, shipping, payment } = cart;
   if (!shipping.address) {
-    props.history.push("/shipping");
+    props.history.push("/WTA-773/shipping");
   } else if (!payment.paymentMethod) {
-    props.history.push("/payment");
+    props.history.push("/WTA-773/payment");
   }
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const shippingPrice = itemsPrice > 100 ? 0 : 10;
@@ -31,7 +31,7 @@ function PlaceOrderScreen(props) {
   }
   useEffect(() => {
     if (success) {
-      props.history.push("/order/" + order._id);
+      props.history.push("/WTA-773/order/" + order._id);
     }
 
   }, [success]);
@@ -78,7 +78,7 @@ function PlaceOrderScreen(props) {
                     </div>
                     <div className="cart-name">
                       <div>
-                        <Link to={"/product/" + item.product}>
+                        <Link to={"/WTA-773/product/" + item.product}>
                           {item.name}
                         </Link>
 

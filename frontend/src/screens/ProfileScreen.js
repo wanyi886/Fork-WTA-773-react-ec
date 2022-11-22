@@ -14,7 +14,7 @@ function ProfileScreen(props) {
   const { userInfo } = userSignin;
   const handleLogout = () => {
     dispatch(logout());
-    props.history.push("/signin");
+    props.history.push("/WTA-773/signin");
   }
   const submitHandler = (e) => {
     e.preventDefault();
@@ -103,7 +103,7 @@ function ProfileScreen(props) {
                   <td>{order.totalPrice}</td>
                   <td>{order.isPaid}</td>
                   <td>
-                    <Link to={"/order/" + order._id}>DETAILS</Link>
+                    <Link to={"/WTA-773/order/" + order._id}>DETAILS</Link>
                   </td>
                 </tr>)}
               </tbody>

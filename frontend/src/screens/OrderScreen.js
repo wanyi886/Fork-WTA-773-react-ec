@@ -10,7 +10,7 @@ function OrderScreen(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     if (successPay) {
-      props.history.push("/profile");
+      props.history.push("/WTA-773/profile");
     } else {
       dispatch(detailsOrder(props.match.params.id));
     }
@@ -74,7 +74,7 @@ function OrderScreen(props) {
                       </div>
                       <div className="cart-name">
                         <div>
-                          <Link to={"/product/" + item.product}>
+                          <Link to={"/WTA-773/product/" + item.product}>
                             {item.name}
                           </Link>
 

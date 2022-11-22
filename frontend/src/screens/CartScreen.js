@@ -21,7 +21,7 @@ function CartScreen(props) {
   }, []);
 
   const checkoutHandler = () => {
-    props.history.push("/signin?redirect=shipping");
+    props.history.push("/WTA-773/signin?redirect=shipping");
   }
 
   return <div className="cart">
@@ -48,7 +48,7 @@ function CartScreen(props) {
                 </div>
                 <div className="cart-name">
                   <div>
-                    <Link to={"/product/" + item.product}>
+                    <Link to={"/WTA-773/product/" + item.product}>
                       {item.name}
                     </Link>
 

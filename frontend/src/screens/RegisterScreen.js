@@ -13,7 +13,7 @@ function RegisterScreen(props) {
   const { loading, userInfo, error } = userRegister;
   const dispatch = useDispatch();
 
-  const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+  const redirect = props.location.search ? props.location.search.split("=")[1] : '/WTA-773';
   useEffect(() => {
     if (userInfo) {
       props.history.push(redirect);
@@ -66,7 +66,7 @@ function RegisterScreen(props) {
         </li>
         <li>
           Already have an account?
-          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Create your amazona account</Link>
+          <Link to={redirect === "/WTA-773" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Create your amazona account</Link>
 
         </li>
 

@@ -41,13 +41,13 @@ function ProductScreen(props) {
     );
   };
   const handleAddToCart = () => {
-    props.history.push('/cart/' + props.match.params.id + '?qty=' + qty);
+    props.history.push('/WTA-773/cart/' + props.match.params.id + '?qty=' + qty);
   };
 
   return (
     <div>
       <div className="back-to-result">
-        <Link to="/">Back to result</Link>
+        <Link to="/WTA-773">Back to result</Link>
       </div>
       {loading ? (
         <div>Loading...</div>
